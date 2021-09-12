@@ -1,0 +1,50 @@
+ArgonAssault 
+
+****Game Design Notes****
+
+Player Experience:
+	-Chaos
+
+Core Mechanic:
+	-Dodge and shoot
+
+Game Mechanics:
+	-Get as far as possible without dying in order to get the highest score possible. Start from beginning when die.
+
+****Game Name****
+Argon Assault
+
+****Game Theme****
+You must save your planet, Argon, from destruction by an invading force.
+
+
+****Game Features****
+Onion Design
+
+Identify your core feature and start there and work your way outward where features deacrease in importance.
+Write down the most important features of ArgonAssault
+1. Camera Rail: 			Path through the level that the camera follows.
+2. Player Movement: 	Horizontal and Vertical movement.
+3. Shooting: 				Player shoot bullets which do damage to opponent.
+4. Health: 					Enemies have health that depletes when shot.
+5. Enemy Paths: 			Enemies should travel on paths and be hand placed by the designer.
+6. Score: 					Points are given for killing enemies.
+7. Game Loop: 			Upon dying. player restarts the level.
+
+Additional Features to consider:
+1. Multiple Levels: 				Finish a level and load the next.
+2. Player Shield: 					When damaged, the player's shield depletes.
+3. Pickups: 						Flying over a shield pickup will increase the player's shields.
+4. Momentary Invulnerability:	After taking damage, the player cannot take damage again for X time.
+5. Weapon Upgrades: 			Flying over a pickup could increase weapon damage.
+
+
+By using this method you can answer some questions which often come up as you design you game
+here are some examples:
+
+	What features should I include in my game?
+	Where should i start development?
+	What are my priorities?
+	What if I run out of time?
+	When should I stop?
+
