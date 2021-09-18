@@ -390,6 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   parent: {fileID: 1981978867}
+  scoreValue: 1
 --- !u!4 &658024827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9067175035363233799, guid: ba069f962f6fd6648bd240e8340f32e1, type: 3}
@@ -664,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   parent: {fileID: 1981978867}
+  scoreValue: 1
 --- !u!1 &938302498
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +775,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1107317108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107317109}
+  - component: {fileID: 1107317110}
+  m_Layer: 0
+  m_Name: ScoreBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1107317109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107317108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 219.96907, y: 14.378523, z: 129.11728}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107317110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107317108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec530df0f9e14f4186d6a7638532bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1220875304 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7257772580636669867, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
@@ -1639,6 +1684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   parent: {fileID: 1981978867}
+  scoreValue: 1
 --- !u!1001 &2003359310993088683
 PrefabInstance:
   m_ObjectHideFlags: 0
