@@ -12,6 +12,10 @@ public class Mover : MonoBehaviour
     [SerializeField] Vector3 speedLinBase;
     [SerializeField] Vector3 speedLinMod;
     [SerializeField] Vector3 speedLinFinal;
+    [SerializeField] Vector3 rotationStart;
+    [SerializeField] Vector3 rotationCurrent;
+    [SerializeField] Vector3 rotationClampMin;
+    [SerializeField] Vector3 rotationClampMax;
     [SerializeField] Vector3 speedRotBase;
     [SerializeField] Vector3 speedRotMod;
     [SerializeField] Vector3 speedRotFinal;
@@ -27,8 +31,10 @@ public class Mover : MonoBehaviour
     void Update()
     {
         GetInput();
+        HandleRotation();
         HandlePosition();
     }
+
 
     private void GetInput()
     {
@@ -36,6 +42,14 @@ public class Mover : MonoBehaviour
         inputVector.y = Input.GetAxis("Vertical");
         //PrintVariable("Horizontal", inputHorizontal);
         //PrintVariable("Vertical", inputVertical);
+    }
+    private void HandleRotation()
+    {
+        speedRotFinal = Vector3.Scale(inputVector, Vector3.Scale(speedRotMod, speedRotBase));
+        rotationCurrent = speedRotFinal;
+        rotationCurrent = new Vector3(-rotationCurrent.y, rotationCurrent.x, -rotationCurrent.x);
+        rotationCurrent = ClampVector(rotationCurrent, rotationClampMin, rotationClampMax);
+        transform.localRotation = Quaternion.Euler(rotationCurrent);
     }
     private void HandlePosition()
     {
