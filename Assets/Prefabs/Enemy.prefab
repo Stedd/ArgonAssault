@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5842712218325063101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 183.21, y: 32.436775, z: 501.56}
-  m_LocalScale: {x: 16.118393, y: 13.406816, z: 17.158031}
+  m_LocalScale: {x: 16, y: 14, z: 17}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,3 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
+  damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
+  parent: {fileID: 0}
+  health: 10
+  scoreValue: 1
