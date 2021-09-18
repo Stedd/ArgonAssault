@@ -1,10 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    [Header("Connections")]
+    [SerializeField] GameObject[] lasers;
+
+    [Header("Input")]
+    [Tooltip("The input vector for controlling the position of the player")]
     [SerializeField] Vector3 inputVector;
+    
+    [Header("Position")]
     [SerializeField] Vector3 positionStart;
     [SerializeField] Vector3 positionCurrent;
     [SerializeField] Vector3 positionClampMin;
@@ -12,6 +20,8 @@ public class Mover : MonoBehaviour
     [SerializeField] Vector3 speedLinBase;
     [SerializeField] Vector3 speedLinMod;
     [SerializeField] Vector3 speedLinFinal;
+    
+    [Header("Rotation")]
     [SerializeField] Vector3 rotationStart;
     [SerializeField] Vector3 rotationCurrent;
     [SerializeField] Vector3 rotationClampMin;
@@ -23,8 +33,8 @@ public class Mover : MonoBehaviour
 
     void Start()
     {
-        positionStart       = transform.localPosition;
-        positionCurrent     = positionStart;
+        positionStart   = transform.localPosition;
+        positionCurrent = positionStart;
     }
 
 
@@ -33,6 +43,7 @@ public class Mover : MonoBehaviour
         GetInput();
         HandleRotation();
         HandlePosition();
+        HandleFiring();
     }
 
 
@@ -57,6 +68,27 @@ public class Mover : MonoBehaviour
         positionCurrent += speedLinFinal * Time.deltaTime;
         positionCurrent = ClampVector(positionCurrent, positionClampMin, positionClampMax);
         transform.localPosition = positionCurrent;
+    }
+
+    void HandleFiring()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            ShootLasers(true);
+        }
+        else
+        {
+            ShootLasers(false);
+        }
+    }
+
+    void ShootLasers(bool _state)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = _state;
+        }
     }
 
     private Vector3 ClampVector(Vector3 _vec, Vector3 _min, Vector3 _max)
