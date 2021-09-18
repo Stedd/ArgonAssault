@@ -493,7 +493,6 @@ GameObject:
   - component: {fileID: 917067781}
   - component: {fileID: 917067780}
   - component: {fileID: 917067779}
-  - component: {fileID: 917067783}
   m_Layer: 0
   m_Name: Structure(1)
   m_TagString: Untagged
@@ -577,23 +576,6 @@ Transform:
   m_Father: {fileID: 938302499}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &917067783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917067778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cafba45584718a646a46ad9c8aa3ae9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
-  damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
-  parent: {fileID: 1981978867}
-  health: 10
-  scoreValue: 1
 --- !u!1 &938302498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,7 +1562,6 @@ GameObject:
   - component: {fileID: 2051075880}
   - component: {fileID: 2051075879}
   - component: {fileID: 2051075878}
-  - component: {fileID: 2051075882}
   m_Layer: 0
   m_Name: Structure
   m_TagString: Untagged
@@ -1664,23 +1645,6 @@ Transform:
   m_Father: {fileID: 938302499}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2051075882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051075877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cafba45584718a646a46ad9c8aa3ae9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
-  damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
-  parent: {fileID: 1981978867}
-  health: 10
-  scoreValue: 1
 --- !u!1001 &2003359310993088683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1767,7 +1731,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3466328582255624376, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
       propertyPath: damage
-      value: 2.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5292085776842336769, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
       propertyPath: m_RootOrder
@@ -1819,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6731038999298314103, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
       propertyPath: damage
-      value: 1.54
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}

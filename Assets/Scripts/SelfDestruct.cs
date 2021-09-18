@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelfDestruct : MonoBehaviour
 {
-    [SerializeField] float timeToDestroy = 3f;
+    [SerializeField] float timeToDestroy = 2f;
     void Start()
     {
         Destroy(gameObject, timeToDestroy);
