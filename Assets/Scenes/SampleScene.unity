@@ -559,5 +559,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 8095023410383438796, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
+      propertyPath: speedRotBase.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095023410383438796, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
+      propertyPath: speedRotBase.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095023410383438796, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}
+      propertyPath: speedRotBase.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9595cd383472bd24ca7bbe2828e08261, type: 3}

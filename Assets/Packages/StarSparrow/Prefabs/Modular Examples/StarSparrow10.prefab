@@ -2102,8 +2102,12 @@ MonoBehaviour:
   speedLinBase: {x: 15, y: 15, z: 5}
   speedLinMod: {x: 1, y: 1, z: 1}
   speedLinFinal: {x: 0, y: 0, z: 0}
-  speedRotBase: {x: 0, y: 0, z: 0}
-  speedRotMod: {x: 0, y: 0, z: 0}
+  rotationStart: {x: 0, y: 0, z: 0}
+  rotationCurrent: {x: 0, y: 0, z: 0}
+  rotationClampMin: {x: -360, y: -360, z: -360}
+  rotationClampMax: {x: 360, y: 360, z: 360}
+  speedRotBase: {x: 20, y: 20, z: 20}
+  speedRotMod: {x: 1, y: 1, z: 1}
   speedRotFinal: {x: 0, y: 0, z: 0}
 --- !u!1 &1662964852299688
 GameObject:
