@@ -8,16 +8,18 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject damageVFX;
-    [SerializeField] Transform parent;
+    //[SerializeField] Transform parent;
     [SerializeField] float health = 10f;
     [SerializeField] int scoreValue = 1;
 
     TMP_Text healthText;
     ScoreBoard scoreBoard;
+    Transform vfxParent;
 
 
     private void Start()
     {
+        vfxParent = GameObject.FindWithTag("VFXGameObjectParent").transform;
         scoreBoard = FindObjectOfType<ScoreBoard>();
         healthText = GetComponentInChildren<TMP_Text>();
         AddRigidBody();
@@ -60,7 +62,7 @@ public class Enemy : MonoBehaviour
     private void SpawnVFX(GameObject _vfx)
     {
         GameObject vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        vfx.transform.parent = vfxParent;
     }
 
     void UpdateHealthText(float _health)
