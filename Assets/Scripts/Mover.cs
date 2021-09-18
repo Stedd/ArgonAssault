@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] Vector3 startPosition;
-    [SerializeField] Vector3 currentPosition;
     [SerializeField] Vector3 inputVector;
-    [SerializeField] Vector3 speedBaseVector;
-    [SerializeField] Vector3 speedModifierVector;
-    [SerializeField] Vector3 speedFinalVector;
+    [SerializeField] Vector3 positionStart;
+    [SerializeField] Vector3 positionCurrent;
+    [SerializeField] Vector3 positionClampMin;
+    [SerializeField] Vector3 positionClampMax;
+    [SerializeField] Vector3 speedLinBase;
+    [SerializeField] Vector3 speedLinMod;
+    [SerializeField] Vector3 speedLinFinal;
+    [SerializeField] Vector3 speedRotBase;
+    [SerializeField] Vector3 speedRotMod;
+    [SerializeField] Vector3 speedRotFinal;
 
 
     void Start()
     {
-        startPosition       = transform.localPosition;
-        currentPosition     = startPosition;
-        //inputVector         = new Vector3();
-        //speedBaseVector     = new Vector3();
-        //speedModifierVector = new Vector3();
-        //speedFinalVector    = new Vector3();
+        positionStart       = transform.localPosition;
+        positionCurrent     = positionStart;
     }
 
 
@@ -38,10 +39,17 @@ public class Mover : MonoBehaviour
     }
     private void HandlePosition()
     {
-        speedFinalVector = Vector3.Scale(speedModifierVector, Vector3.Scale(inputVector, speedBaseVector));
-        currentPosition += speedFinalVector*Time.deltaTime;
-        transform.localPosition = currentPosition;
+        speedLinFinal = Vector3.Scale(inputVector, Vector3.Scale(speedLinMod, speedLinBase));
+        positionCurrent += speedLinFinal * Time.deltaTime;
+        positionCurrent = ClampVector(positionCurrent, positionClampMin, positionClampMax);
+        transform.localPosition = positionCurrent;
     }
+
+    private Vector3 ClampVector(Vector3 _vec, Vector3 _min, Vector3 _max)
+    {
+        return new Vector3(Mathf.Clamp(_vec.x, _min.x, _max.x), Mathf.Clamp(_vec.y, _min.y, _max.y), Mathf.Clamp(_vec.z, _min.z, _max.z));
+    }
+
     private void PrintVariable(string _name, float _value)
     {
         Debug.Log(_name +": " + _value);
