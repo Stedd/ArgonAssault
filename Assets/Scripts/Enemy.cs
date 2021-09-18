@@ -20,7 +20,14 @@ public class Enemy : MonoBehaviour
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         healthText = GetComponentInChildren<TMP_Text>();
-        UpdateHealthText(health);
+        AddRigidBody();
+        //UpdateHealthText(health);
+    }
+
+    private void AddRigidBody()
+    {
+        Rigidbody entityRigidBody = gameObject.AddComponent<Rigidbody>();
+        entityRigidBody.useGravity = false;
     }
 
     private void OnParticleCollision(GameObject other)
@@ -36,7 +43,7 @@ public class Enemy : MonoBehaviour
 
         health -= other.GetComponent<Weapon>().damage;
 
-        UpdateHealthText(health);
+        //UpdateHealthText(health);
 
         if(health <= 0)
         {
