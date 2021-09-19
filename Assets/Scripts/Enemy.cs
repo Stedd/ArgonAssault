@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject deathFX;
     [SerializeField] GameObject damageVFX;
     //[SerializeField] Transform parent;
     [SerializeField] float health = 10f;
@@ -39,9 +39,7 @@ public class Enemy : MonoBehaviour
 
     private void ProcessHit(GameObject other)
     {
-        SpawnVFX(damageVFX);
-
-        scoreBoard.UpdateScore(scoreValue);
+        SpawnFX(damageVFX);
 
         health -= other.GetComponent<Weapon>().damage;
 
@@ -55,13 +53,21 @@ public class Enemy : MonoBehaviour
 
     private void ProcessDeath(GameObject other)
     {
-        SpawnVFX(deathVFX);
+        UpdateScore();
+
+        SpawnFX(deathFX);
+
         Destroy(gameObject);
     }
 
-    private void SpawnVFX(GameObject _vfx)
+    private void UpdateScore()
     {
-        GameObject vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
+        scoreBoard.UpdateScore(scoreValue);
+    }
+
+    private void SpawnFX(GameObject _fx)
+    {
+        GameObject vfx = Instantiate(_fx, transform.position, Quaternion.identity);
         vfx.transform.parent = vfxParent;
     }
 

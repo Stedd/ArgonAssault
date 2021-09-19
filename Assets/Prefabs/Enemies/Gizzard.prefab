@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8014456707662637789}
   - component: {fileID: 8014456707662637788}
   - component: {fileID: 8014456707662637787}
+  - component: {fileID: 316402036763921862}
   m_Layer: 0
   m_Name: Gizzard
   m_TagString: Untagged
@@ -229,10 +230,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafba45584718a646a46ad9c8aa3ae9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
   health: 5
   scoreValue: 1
+--- !u!65 &316402036763921862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014456707662637786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.147294, y: 3.2459185, z: 10.599532}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8014456707911014514
 GameObject:
   m_ObjectHideFlags: 0

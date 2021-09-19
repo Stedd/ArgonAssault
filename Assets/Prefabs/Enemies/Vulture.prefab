@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8087676026921325288}
   - component: {fileID: 8087676026921325291}
   - component: {fileID: 8087676026921325290}
+  - component: {fileID: 1390313465173054131}
   m_Layer: 0
   m_Name: Vulture
   m_TagString: Untagged
@@ -95,10 +96,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafba45584718a646a46ad9c8aa3ae9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
   health: 250
   scoreValue: 125
+--- !u!65 &1390313465173054131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8087676026921325301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.115113, y: 2.7828712, z: 10.850533}
+  m_Center: {x: 0, y: -0.000013887882, z: 0.0000026226044}
 --- !u!1 &8087676027557910114
 GameObject:
   m_ObjectHideFlags: 0
