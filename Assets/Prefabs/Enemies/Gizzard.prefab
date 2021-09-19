@@ -231,7 +231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
-  parent: {fileID: 0}
   health: 5
   scoreValue: 1
 --- !u!1 &8014456707911014514

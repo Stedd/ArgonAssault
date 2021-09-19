@@ -87,8 +87,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.11, y: 0.33, z: 1.57}
-  m_Center: {x: 0, y: 0, z: -2.95}
+  m_Size: {x: 6.11, y: 0.33, z: 1.7212094}
+  m_Center: {x: 0, y: -2.6768316e-15, z: -2.874396}
 --- !u!1 &7191512694802593536
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,8 +258,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33, y: 6.11, z: 1.57}
-  m_Center: {x: 0, y: 0, z: -2.95}
+  m_Size: {x: 0.33, y: 6.11, z: 1.7190211}
+  m_Center: {x: 0, y: 2.691786e-17, z: -2.8754916}
 --- !u!1 &7191512695740257522
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 33bfaa8c4b854b447b3de9d6af6ad1cd, type: 3}
   damageVFX: {fileID: 3200836327345539238, guid: f21cc74407c468941bc9aae3c24f64c8, type: 3}
-  parent: {fileID: 0}
   health: 30
   scoreValue: 15
 --- !u!1 &7191512696567221228
@@ -447,6 +446,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.66
-  m_Height: 9.97
+  m_Height: 10.606212
   m_Direction: 2
-  m_Center: {x: 0, y: 0.05, z: -0.33}
+  m_Center: {x: 0, y: 0.050000034, z: -0.011905353}
